@@ -130,11 +130,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605091009432</updated>
-      <workItem from="1605091010499" duration="2817000" />
+      <workItem from="1605091010499" duration="4320000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="97" y="148" width="1720" height="840" key="DiffContextDialog" timestamp="1605103847107">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="97" y="148" width="1720" height="840" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605103847107" />
+    <state x="748" y="278" key="FileChooserDialogImpl" timestamp="1605103235754">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="748" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605103235754" />
+    <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1605103504904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605103504904" />
+    <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605103504904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605103504904" />
   </component>
 </project>
