@@ -67,7 +67,7 @@ class CategoryController extends BaseController
     {
         $data = $request->input();
         if (empty($data['slug'])) {
-            $data['slug'] = str_slug($data['title']);
+            $data['slug'] = \Str::slug($data['title']);
         }
 
         // создаст объект, но не добавит в бд - 1 способ
@@ -86,7 +86,7 @@ class CategoryController extends BaseController
                 ->withInput();
     }
     }
-	
+
 //	/**
 //	 * Display the specified resource.
 //	 *
@@ -163,7 +163,7 @@ class CategoryController extends BaseController
 		}
 		$data = $request->all();
         if (empty($data['slug'])) {
-            $data['slug'] = str_slug($data['title'], '-');
+            $data['slug'] = \Str::slug($data['title']);
         }
 //		$result = $item->fill($data)->save();
 		$result = $item->update($data);
