@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2facb89-f95c-4aee-b9fb-0bb970ce4e3c" name="Default Changelist" comment="route">
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/admin/posts/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/admin/posts/includes/item_edit_add_col.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/admin/posts/includes/item_edit_main_col.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blog/admin/posts/includes/result_messages.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/BlogPostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/BlogPostFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_13_124236_create_blog_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_13_124236_create_blog_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_13_124259_create_blog_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_13_124259_create_blog_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/BlogCategoriesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/BlogCategoriesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/BlogPostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BlogPostRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +173,7 @@
       <updated>1605091009432</updated>
       <workItem from="1605091010499" duration="4649000" />
       <workItem from="1605104296808" duration="1459000" />
+      <workItem from="1605273488870" duration="9707000" />
     </task>
     <task id="LOCAL-00001" summary="route">
       <created>1605105369586</created>
@@ -196,6 +198,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="route" />
@@ -230,5 +233,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605112639996" />
+    <state x="1156" y="259" width="592" height="522" key="find.popup" timestamp="1605112741656">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1156" y="259" width="592" height="522" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605112741656" />
+    <state x="1116" y="237" key="run.anything.popup" timestamp="1605274483904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1116" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605274483904" />
   </component>
 </project>
