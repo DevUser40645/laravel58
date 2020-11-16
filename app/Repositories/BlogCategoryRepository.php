@@ -74,6 +74,9 @@ class BlogCategoryRepository extends CoreRepository
             ->startConditions()
             ->select($columns)
 //            ->paginate($perPage,$columns);
+            ->with([
+                'parentCategory:id,title'
+            ])
             ->paginate($perPage);
         return $result;
     }
