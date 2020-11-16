@@ -21,8 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c2facb89-f95c-4aee-b9fb-0bb970ce4e3c" name="Default Changelist" comment="route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/BlogCategoryObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/BlogCategoryObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/BlogPostCreateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BlogPostCreateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BlogPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BlogPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/BlogPostObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/BlogPostObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/admin/posts/includes/result_messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/admin/posts/includes/result_messages.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +173,7 @@
       <workItem from="1605091010499" duration="4649000" />
       <workItem from="1605104296808" duration="1459000" />
       <workItem from="1605273488870" duration="14106000" />
-      <workItem from="1605528327017" duration="3934000" />
+      <workItem from="1605528327017" duration="8587000" />
     </task>
     <task id="LOCAL-00001" summary="route">
       <created>1605105369586</created>

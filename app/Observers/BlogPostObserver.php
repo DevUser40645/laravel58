@@ -14,8 +14,10 @@ class BlogPostObserver
      */
     public function creating(BlogPost $blogPost)
     {
-//        $this->setPublishedAt($blogPost);
-//        $this->setSlug($blogPost);
+        $this->setPublishedAt($blogPost);
+        $this->setSlug($blogPost);
+        $this->setHtml($blogPost);
+        $this->setUser($blogPost);
     }
 
     /**
@@ -50,6 +52,30 @@ class BlogPostObserver
         {
             $blogPost->published_at = Carbon::now();
         }
+    }
+
+    /**
+     * Установка значений полю content_html относительно поля content_raw
+     *
+     * @param BlogPost $blogPost
+     */
+    protected function setHtml(BlogPost $blogPost)
+    {
+        if ( $blogPost->isDirty('content_raw') )
+        {
+            //TODO: тут должна быть генерация markdown -> html
+            $blogPost->content_html = $blogPost->content_raw;
+        }
+    }
+
+    /**
+     * Если user_id не указан, то устанавливаем пользователя по-умолчанию
+     *
+     * @param BlogPost $blogPost
+     */
+    protected function setUser(BlogPost $blogPost)
+    {
+        $blogPost->user_id = auth()->id() ?? BlogPost::UNKNOWN_USER;
     }
 
     /**

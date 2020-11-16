@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Blog\Admin;
 
+use App\Models\BlogPost;
 use App\Repositories\BlogPostRepository;
 use App\Repositories\BlogCategoryRepository;
 use App\Http\Requests\BlogPostCreateRequest;
@@ -55,7 +56,11 @@ class PostController extends BaseController
      */
     public function create()
     {
-        dd(__METHOD__);
+        $item = new BlogPost();
+        $categoryList = $this->blogCategoryRepository->getForComboBox();
+
+        return view('blog.admin.posts.edit',
+            compact('item', 'categoryList'));
     }
 
     /**
@@ -66,7 +71,16 @@ class PostController extends BaseController
      */
     public function store(BlogPostCreateRequest $request)
     {
-        dd(__METHOD__);
+        $data = $request->input();
+        $item = (new BlogPost())->create($data);
+
+        if ( $item ) {
+            return redirect()->route('blog.admin.posts.edit', [$item->id])
+                ->with(['success' => 'Saved successfully']);
+        } else {
+            return back()->withErrors(['msg' => 'Save error'])
+                ->withInput();
+        }
     }
 
     /**
