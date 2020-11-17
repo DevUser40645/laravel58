@@ -158,6 +158,37 @@ class PostController extends BaseController
      */
     public function destroy($id)
     {
-        dd(__METHOD__, $id);
+        //софт-удаление, в бд остается
+        $result = BlogPost::destroy($id);
+
+        //полное удаление из бд
+//        $result = BlogPost::find($id)->forceDelete();
+
+        if ( $result ) {
+            return redirect()
+                ->route('blog.admin.posts.index')
+                ->with(['success' => "Post id = [$id] was deleted", 'restore' => $id]);
+        } else{
+            return back()->withErrors(['msg' => 'Delete error']);
+        }
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function restore($id)
+    {
+        $item = $this->blogPostRepository->getTreashedPost($id);
+        $result = $item->restore();
+
+        if ( $result ) {
+            return back()
+                ->with(['success' => "Post id = [$id] was successfully restored"]);
+        } else{
+            return back()->withErrors(['msg' => 'Delete restore post']);
+        }
     }
 }

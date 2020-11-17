@@ -25,6 +25,10 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 {{ session()->get('success') }}
+                @if (session('restore'))
+                    <a href="{{route('blog.admin.posts.restore', session()->get('restore'))}}" type="submit"
+                       class="btn btn-warning">Restore</a>
+                @endif
             </div>
         </div>
     </div>

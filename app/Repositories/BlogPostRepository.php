@@ -66,4 +66,17 @@ class BlogPostRepository extends CoreRepository
     {
         return $this->startConditions()->find($id);
     }
+
+    /**
+     * Получить удаленную запись для восстановления в админке
+     *
+     * @param $id
+     *
+     * @return Model
+     */
+    public function getTreashedPost($id)
+    {
+        $result = $this->startConditions()->withTrashed()->find($id);
+        return $result;
+    }
 }
