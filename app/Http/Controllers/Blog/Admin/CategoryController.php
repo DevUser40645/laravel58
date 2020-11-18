@@ -49,7 +49,7 @@ class CategoryController extends BaseController
      */
     public function create()
     {
-		$item = new BlogCategory();
+		$item = BlogCategory::make();
 //		$categoryList = BlogCategory::all();
 		$categoryList = $this->blogCategoryRepository->getForComboBox();
 
@@ -76,7 +76,7 @@ class CategoryController extends BaseController
 //		$item->save(); // добавит в бд; в переменной будет true/false
 
         // создаст объект и добавит в бд - 2 способ
-        $item = (new BlogCategory())->create($data); // в переменной будет объект/false
+        $item = BlogCategory::create($data); // в переменной будет объект/false
 
 		if($item){
 		    return redirect()->route('blog.admin.categories.edit', [$item->id])
@@ -123,16 +123,16 @@ class CategoryController extends BaseController
         $v['title_before'] = $item->title;
         $item->title = 'Test title';
 
-        $v['title_after'] = $item->title;
-        $v['getAttribute'] = $item->getAttribute('title');
-        $v['attributesToArray'] = $item->attributesToArray();
-//        $v['attributes'] = $item->attributes('title');
-        $v['getAttributeValue'] = $item->getAttributeValue('title');
-        $v['getMutatedAttributes'] = $item->getMutatedAttributes();
-        $v['hasGetMutator_for_title'] = $item->hasGetMutator('title');
-        $v['toArray'] = $item->toArray();
-
-        dd($v, $item);
+//        $v['title_after'] = $item->title;
+//        $v['getAttribute'] = $item->getAttribute('title');
+//        $v['attributesToArray'] = $item->attributesToArray();
+////        $v['attributes'] = $item->attributes('title');
+//        $v['getAttributeValue'] = $item->getAttributeValue('title');
+//        $v['getMutatedAttributes'] = $item->getMutatedAttributes();
+//        $v['hasGetMutator_for_title'] = $item->hasGetMutator('title');
+//        $v['toArray'] = $item->toArray();
+//
+//        dd($v, $item);
 
         if(empty($item)){
             abort(404);
