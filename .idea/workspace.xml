@@ -20,23 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2facb89-f95c-4aee-b9fb-0bb970ce4e3c" name="Default Changelist" comment="route">
-      <change beforePath="$PROJECT_DIR$/.idea/laravel58.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel58.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GeneralCatalog/AbstractJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GeneralCatalog/ArchiveUploadsJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GeneralCatalog/GenerateCatalogCacheJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GeneralCatalog/GenerateCatalogMainJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GeneralCatalog/GenerateCategoriesJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GeneralCatalog/GenerateDeliveriesJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GeneralCatalog/GenerateGoodsFileJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GeneralCatalog/GeneratePointsJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GeneralCatalog/GeneratePricesFileChunkJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GeneralCatalog/SendPriceRequestJob.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DiggingDeeperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DiggingDeeperController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,11 +152,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1k8nIuNeDlYB3B5M4d7dvVqylA2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -188,7 +189,9 @@
       <workItem from="1605273488870" duration="14106000" />
       <workItem from="1605528327017" duration="12352000" />
       <workItem from="1605606533497" duration="8591000" />
-      <workItem from="1605688414664" duration="10881000" />
+      <workItem from="1605688414664" duration="17684000" />
+      <workItem from="1605776761254" duration="7580000" />
+      <workItem from="1605864495513" duration="803000" />
     </task>
     <task id="LOCAL-00001" summary="route">
       <created>1605105369586</created>
@@ -216,6 +219,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="route" />
     <option name="LAST_COMMIT_MESSAGE" value="route" />
   </component>
@@ -224,10 +228,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="424" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605104271146" />
-    <state x="1297" y="278" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605532384734">
+    <state x="1298" y="45" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605715155628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1297" y="278" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605532384734" />
+    <state x="1298" y="45" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605715155628" />
+    <state x="1297" y="278" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605715490616">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1297" y="278" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605715490616" />
     <state x="0" y="0" width="1920" height="1040" key="CommitChangelistDialog2" timestamp="1605106398574">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

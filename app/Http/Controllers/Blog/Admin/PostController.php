@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Blog\Admin;
 
+use App\Jobs\BlogPostAfterCreateJob;
+use App\Jobs\BlogPostAfterDeleteJob;
 use App\Models\BlogPost;
 use App\Repositories\BlogPostRepository;
 use App\Repositories\BlogCategoryRepository;
@@ -56,7 +58,7 @@ class PostController extends BaseController
      */
     public function create()
     {
-        $item = new BlogPost();
+        $item = BlogPost::make();
         $categoryList = $this->blogCategoryRepository->getForComboBox();
 
         return view('blog.admin.posts.edit',
@@ -72,9 +74,13 @@ class PostController extends BaseController
     public function store(BlogPostCreateRequest $request)
     {
         $data = $request->input();
-        $item = (new BlogPost())->create($data);
+        $item = BlogPost::create($data);
 
         if ( $item ) {
+
+            $job = new BlogPostAfterCreateJob($item);
+            $this->dispatch($job);
+
             return redirect()->route('blog.admin.posts.edit', [$item->id])
                 ->with(['success' => 'Saved successfully']);
         } else {
@@ -165,6 +171,24 @@ class PostController extends BaseController
 //        $result = BlogPost::find($id)->forceDelete();
 
         if ( $result ) {
+
+            BlogPostAfterDeleteJob::dispatch($id)->delay(20); // с отстрочкой 20сек
+
+            // > Варианты запуска:
+
+            //BlogPostAfterDeleteJob::dispatchNow($id);
+
+            //dispatch(new BlogPostAfterDeleteJob($id));
+            //dispatch_now(new BlogPostAfterDeleteJob($id));
+
+            //$this->>dispatch(BlogPostAfterDeleteJob($id));
+            //$this->>dispatch_now(BlogPostAfterDeleteJob($id));
+
+            //$job = new BlogPostAfterDeleteJob($id);
+            //$job->handle();
+
+            // < Варианты запуска
+
             return redirect()
                 ->route('blog.admin.posts.index')
                 ->with(['success' => "Post id = [$id] was deleted", 'restore' => $id]);
